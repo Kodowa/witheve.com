@@ -46,14 +46,43 @@ table {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
  }
 
-.uberwrapper { height:100%; background-color:#ffffff; padding: 75px 0px 100px;}
-.logo { display: block; width: 200px; margin: auto; padding: 0px 0px 75px;}
-.wrapper700 { max-width: 700px; margin: auto;}
+body { display: flex; justify-content: center; color: #333; font-family: "Open Sans"; font-weight: 400; font-size: 12pt; padding-bottom:20vh; }
+.wrapper { max-width: 1000px; }
 
-h1 { font-family: "Open Sans"; font-weight: 600; text-transform: uppercase; font-size: 18pt; color: #15193e; padding: 50px 0px 35px;}
-a { font-weight: 400; text-decoration: underline; color: #15193E;}
-a:hover { color: #5b59a4; }
-p { font-family: "Merriweather"; font-weight: 300; font-size: 14pt; padding-bottom: 12px; line-height: 40px;}
+.github { position:absolute; right:100px; top:50px;}
+
+.light { color: #777; }
+
+img { max-width: 700px; color: #777; border:none; }
+img:not([src]) { width:500px; height:300px; background: #eee; border:none; }
+
+img.full { width:1000px; max-width:1000px; }
+
+row, .row { display:flex; flex:1; }
+row + row { margin-top:30px; }
+co, .col { display:flex; flex-direction:column; flex:1; max-width:480px; }
+co1, .col1 { display:flex; flex-direction:column; flex:1; max-width:700px; }
+co + co { margin-left:40px; }
+co img { max-width: 480px; }
+co1 img { margin:20px 0 30px 0; }
+
+p + img { margin-top:20px; }
+
+ul { position: relative; margin: 20px 0 20px 30px; }
+li { position:relative; margin-left: 20px; }
+li:before { width: 13px; height: 13px; background: white; border: 1px solid #555; left: -34px; content: ""; position: absolute; display: block; top: 2px; }
+li + li { margin-top: 15px; }
+
+ul.small { margin:20px 0 20px 10px; }
+ul.small li:before { width:7px; height:7px; left: -24px; top:5px; }
+
+h1 { font-family: "Open Sans"; font-weight: 600; font-size: 18pt; color: #15193e; padding: 50px 0px 35px;}
+h2 { font-family: "Open Sans"; font-weight: 600; font-size: 14pt; color: #15193e; padding: 50px 0px 35px;}
+h3 { font-family: "Open Sans"; font-weight: 600; font-size: 12pt; color: #15193e; padding: 50px 0px 35px;}
+h4 { font-family: "Open Sans"; font-weight: 600; font-size: 12pt; color: #15193e; margin-bottom:8px; }
+a { font-weight: 400;  color: #15193E; border-bottom:1px dashed #555; cursor:pointer; }
+a:hover { color: #625eff; border-color: #625eff; }
+p { font-family: "Open Sans"; font-weight: 400; font-size: 12pt; padding-bottom: 12px; line-height: 30px;}
 
 @media only screen
   and (max-width : 740px) {
