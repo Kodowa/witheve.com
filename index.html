@@ -38,7 +38,7 @@ We've made tremendous advancements since the early days of programming, but the 
 <img style="margin:20px 0 30px 0;" src="images/error.png" />
 
 <p>
-Focusing on the machine and ignoring the human factors of software engineering has led us down a difficult road. From inscrutable error messages to semantics that require years of study to understand, we've landed on a version of programming that is actively antagonistic toward our goal of creating usable and robust software. To make matters worse, we're programming as if we still had the 1970's computer that our tools were developed for. Unsurprisingly, we are struggling. A lot.
+Focusing on the machine and ignoring the human factors of software engineering have led us down a difficult road. From inscrutable error messages to semantics that require years of study to understand, we've landed on a version of programming that is actively antagonistic toward our goal of creating usable and robust software. To make matters worse, we're programming as if we still had the 1970's computer that our tools were developed for. Unsurprisingly, we are struggling. A lot.
 </p>
 
 <p>
@@ -70,7 +70,7 @@ The first difference you'll notice is that programs look more like word document
 This gives us the freedom to organize our programs based on how we actually think, not how the code will be compiled. We can group blocks based on functionality, similarity, owner, or anything else we can think of.
 </p>
 <p>
-More importantly though, it gives us the ability to weave a narrative of not just what the program does, but why it does it. You can write a spec and then embed the blocks of code that make it work. Someone new to the project can look at a table of contents and get a sense of what's going on and dig into a section they want to add something to. Instead of constantly trying to piece the narrative back together every single time we fix a bug, we can make it an artifact of programming in the first place.
+More importantly though, it gives us the ability to weave a narrative of not just what the program does, but why it does it. You can write a spec and then embed the blocks of code that make it work. Someone new to the project can look at the table of contents to get a sense of what's going on and then dig into a section to add something. Instead of constantly trying to piece the narrative back together every single time we fix a bug, we can make it an artifact of programming in the first place.
 </p>
 </co>
 
@@ -83,7 +83,7 @@ More importantly though, it gives us the ability to weave a narrative of not jus
 <row>
 <co>
 <p>
-The environment we want in this context is more about narrative creation than class hierarchies. We want a *reading* and  *writing* environment that allows us to meaningfully layout and explore our program. The first step towards that is having a table of contents that provides both an outline and a convenient form of navigation.
+The environment we want in this context is more about narrative creation than class hierarchies. We want a *reading* and  *writing* environment that allows us to meaningfully lay out and explore our program. The first step towards that is having a table of contents that provides both an outline and a convenient form of navigation.
 </p>
 <p>
 But just because we have a linear representation of the program, that doesn't mean we can't view it in other ways just as easily. Instead of a slew of tabs and complex navigation features, we have a document that arranges itself in whatever shape we need it.
@@ -128,7 +128,7 @@ Eve is based on a single unifying principle: everything is a record - a set of a
 
 <co>
 <p>
-Blocks are reactive in Eve, they declaratively specify "when I see these patterns, do these things." You don't need to specify how they update, or how they're cached, or how they're stored, or...  If you add new todos, new divs will automatically appear.
+Blocks are reactive in Eve; they declaratively specify "when I see these patterns, do these things." You don't need to specify how they update, or how they're cached, or how they're stored, or...  If you add new todos, new divs will automatically appear.
 </p>
 <p>
 Just nine operations let us write everything from a flappy bird clone to Eve's own analyzer.
@@ -166,7 +166,7 @@ How about memory? Like anything else in Eve, we search for what we want and then
 <row>
 <co>
 <p>
-But we can do even better, let's visualize free memory over time:
+But we can do even better. Let's visualize free memory over time:
 </p>
 </co>
 
@@ -220,7 +220,7 @@ As we've developed Eve, we've learned that these seemingly simple choices have r
 <h3>Small blocks that fit into a broader story</h3>
 
 <p>
-Code isn't an asset, it's a liability. Every line adds to the surface area of potential bugs and to the pile of things that must be understood and maintained. As long as we aren't obfuscating intent, our goal should be to have less code. Eve programs tend to be very small, but even more importantly individual blocks remain short and single purpose. Because of the literate programming focus, blocks also fit into a narrative that helps provide context. Code is presented in small, digestible pieces, with built in explanations and a place in the larger picture. The impact this has on maintenance, navigation, and collaboration can't be overstated.
+Code isn't an asset, it's a liability. Every line adds to the surface area of potential bugs and to the pile of things that must be understood and maintained. As long as we aren't obfuscating intent, our goal should be to have less code. Eve programs tend to be very small, but even more importantly, individual blocks remain short and single purpose. Because of the literate programming focus, blocks also fit into a narrative that helps provide context. Code is presented in small, digestible pieces, with built-in explanations and a place in the larger picture. The impact this has on maintenance, navigation, and collaboration can't be overstated.
 </p>
 </co>
 
@@ -243,7 +243,7 @@ Instead of spreading null checks and asserts throughout our code, invariants can
 <img title=" integrity constraint example " />
 
 <p>
-The fact that constraints can be expressed globally through block composition has a couple of interesting implications. The first is that correctness is pay as you go. We don't have to layout a bunch of types or schemas before we even really know what we're trying to build. We can work on our program and layer on invariants as it seems appropriate.
+The fact that constraints can be expressed globally through block composition has a couple of interesting implications. The first is that correctness is pay as you go. We don't have to lay out a bunch of types or schemas before we even really know what we're trying to build. We can work on our program and layer on invariants as it seems appropriate.
 </p>
 
 <p>
@@ -285,10 +285,10 @@ The closest thing we have to this now is the web inspector in browsers, but it's
 <row>
 <co>
 <p>
-Our systems should be measured by our ability to understand them when they're falling apart. Why can't we ask "computer, why is this malfunctioning?" like they do in Star Trek? With the investigate button we can.
+Our systems should be measured by our ability to understand them when they're falling apart. Why can't we ask "Computer, why is this malfunctioning?" like they do in Star Trek? With the investigate button we can.
 </p>
 <p>
-This is like having another programmer right next to us 24/7. When we're stuck, we hit the button and Eve sets us on a path toward finding and fixing whatever's wrong - "computer, why is this slow?"
+This is like having another programmer right next to us 24/7. When we're stuck, we hit the button and Eve sets us on a path toward finding and fixing whatever's wrong - "Computer, why is this slow?"
 </p>
 
 <p>
@@ -305,7 +305,7 @@ One of the single greatest changes we can make to programming is giving ourselve
 
 <co1>
 <p>
-There's a lot more to dig into, from how we think Eve can shift the bell curve of programming to how we can make this crazy language fast. This is however, just the beginning of the first of three milestones in our roadmap:
+There's a lot more to dig into, from how we think Eve can shift the bell curve of programming to how we can make this crazy language fast. This is, however, just the first of three milestones on our roadmap:
 </p>
 
 <ul>
@@ -334,7 +334,7 @@ There's a lot more to dig into, from how we think Eve can shift the bell curve o
 </ul>
 
 <p>
-Through all of our research, we've started to piece together a future of computation to aspire to - from humane tools and a different concept of the machine, to giving everyone on the planet a super power. There's so much more to do and regardless of whether or not you believe Eve is it, it's up to all of us to make such a future a reality. Failing to do so doesn't just hold our industry back. It drags down all human endeavors waiting to be driven by better forms of computation. The computer is arguably the single most powerful tool ever developed, it's time for us to truly wield it.
+Through all of our research, we've started to piece together a future of computation to aspire to - from humane tools and a different concept of the machine, to giving everyone on the planet a superpower. There's so much more to do and regardless of whether or not you believe Eve is it, it's up to all of us to make such a future a reality. Failing to do so doesn't just hold our industry back. It drags down all human endeavors waiting to be driven by better forms of computation. The computer is arguably the single most powerful tool ever developed. It's time for us to truly wield it.
 </p>
 </co1>
 
@@ -343,7 +343,7 @@ Through all of our research, we've started to piece together a future of computa
 <co>
 <h3>Get involved</h3>
 <p>
-The more interest we can show, the easier it will be for us to continue doing this work. So the best way to help is to spread the word and engage with us. Unfortunately we aren't hiring right now, but we hope to change that in the not too distant future.
+The more interest we can show, the easier it will be for us to continue doing this work. The best way to help is to spread the word and engage with us. Unfortunately we aren't hiring right now, but we hope to change that in the not too distant future.
 </p>
 <ul class="small">
   <li>Send it to people!</li>
@@ -358,7 +358,7 @@ The more interest we can show, the easier it will be for us to continue doing th
 <h3>Learn more</h3>
 
 <p>
-Below we've put together a set of deep dives. If you're interested in our how Eve came to be, the research it's based on, how it works, or some of the deeper implications, check them out:
+Below we've put together a set of deep dives. If you're interested in how Eve came to be, the research it's based on, or some of the deeper implications, check them out:
 </p>
 
 <ul class="small">
