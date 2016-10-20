@@ -20,7 +20,7 @@
     <h1>Eve: Programming designed for humans</h1>
 
     <p>
-    Eve is a programming language and IDE based on years of research into building a human-first programming platform. Starting from first principles, it presents a very different take on what programming could be. To get a taste, let's look at a day in the life of an Eve programmer:
+      Eve is a programming language and IDE based on years of research into building a human-first programming platform. Starting from first principles, it presents a very different take on what programming could be. To get a taste, let's look at a day in the life of an Eve programmer:
     </p>
 <img title="a day in the life of an Eve programmer" />
 </co1>
@@ -32,7 +32,7 @@
 <row>
 <co1>
 <p>
-We've made tremendous advancements since the early days of programming, but the modern form still forces us into the role of bit shifting machines. Programming has always been about us - the humans staring at monitors. The computer doesn't care what syntax or semantics we use or how error messages are phrased. Those are for you and me. And this is how we treat ourselves...
+We've made tremendous advancements since the early days of programming, but the modern form still forces us into the role of bit shifting machines. Programming has always been for us - the humans tapping at keyboards. The computer doesn't care what syntax or semantics we use or how error messages are phrased. Those are for you and me. And this is how we treat ourselves...
 </p>
 
 <img style="margin:20px 0 30px 0;" src="images/error.png" />
@@ -67,10 +67,10 @@ Over the past several years, we've been exploring what an alternate future could
 The first difference you'll notice is that programs look more like word documents than code files. Eve is designed for "literate programming" - instead of comments embedded in code, code is embedded in a document.
 </p>
 <p>
-Human-centric programming requires the freedom to build and organize things based on how we actually think, not how the code will be compiled. Doing so allows us to create groupings based on functionality, similarity, owner, or anything else we can think of.
+This gives us the freedom to organize our programs based on how we actually think, not how the code will be compiled. We can group blocks based on functionality, similarity, owner, or anything else we can think of.
 </p>
 <p>
-More importantly though, it gives us the ability to weave a narrative of not just what the program does, but why it does it. You can write a spec and then go back and embed the blocks of code that make it work. Someone new to the project can look at a table of contents and get a sense of what's going on, then dig into a section they want to add something to. Instead of constantly trying to piece the narrative back together every single time we fix a bug, we can make it an artifact of the process in the first place.
+More importantly though, it gives us the ability to weave a narrative of not just what the program does, but why it does it. You can write a spec and then embed the blocks of code that make it work. Someone new to the project can look at a table of contents and get a sense of what's going on and dig into a section they want to add something to. Instead of constantly trying to piece the narrative back together every single time we fix a bug, we can make it an artifact of programming in the first place.
 </p>
 </co>
 
@@ -83,39 +83,29 @@ More importantly though, it gives us the ability to weave a narrative of not jus
 <row>
 <co>
 <p>
-A side effect of literate programming is that the environment we want is more about narrative creation and navigation than class hierarchies. We want a *reading* and  *writing* environment. To that end, Eve programs have a table of contents, which we can use to find our way around.
+The environment we want in this context is more about narrative creation than class hierarchies. We want a *reading* and  *writing* environment that allows us to meaningfully layout and explore our program. The first step towards that is having a table of contents that provides both an outline and a convenient form of navigation.
+</p>
+<p>
+But just because we have a linear representation of the program, that doesn't mean we can't view it in other ways just as easily. Instead of a slew of tabs and complex navigation features, we have a document that arranges itself in whatever shape we need it.
 </p>
 </co>
 <co>
-<img class="" title=" TOC " />
+<img style="height:500px" title=" TOC + elision " />
 </co>
 </row>
 
-<row style="margin-top:60px;">
-<co1>
-<p>
-But just because we have a linear representation of the program, that doesn't mean we can't view it in other ways just as easily. Instead of a slew of tabs and complex navigation features, we have a document that we arrange however we want.
-</p>
-
-<img class="full" title=" elision " />
-</co1>
-</row>
-
-<row>
+<row style="margin-top:50px;">
 <co>
-<p>
-Using comments on the document, Eve provides helpful advice for errors and often offers to fix the problem for you.
-</p>
-
 <img title=" errors " />
 </co>
-
 <co>
 <p>
-Comments also let us inline visualizations, inspectors, and a whole host of other things.
+As much as possible, information is kept in context through comments that are embedded in the document. Using these,
+Eve can give you advice when things aren't quite right - she can even offer to fix some of them for you.
 </p>
-
-<img title=" visualization " />
+<p>
+Comments also put visualizations, inspectors, and a whole host of other things inline. Everything is related back to the blocks in the document, keeping the narrative at the center.
+</p>
 </co>
 </row>
 
@@ -138,7 +128,7 @@ Eve is based on a single unifying principle: everything is a record - a set of a
 
 <co>
 <p>
-Blocks are reactive in Eve, they declaratively specify "when I see these patterns, do these things." You don't need to specify how they update, or how they're cached, or how they're stored, or…  If you add new todos, new divs will automatically appear.
+Blocks are reactive in Eve, they declaratively specify "when I see these patterns, do these things." You don't need to specify how they update, or how they're cached, or how they're stored, or...  If you add new todos, new divs will automatically appear.
 </p>
 <p>
 Just nine operations let us write everything from a flappy bird clone to Eve's own analyzer.
@@ -197,23 +187,23 @@ Think about what this does for our ability to understand programs - we can trivi
 </co>
 </row>
 
-<h3 style="margin-top:30px;">The "wat?" button</h3>
+<h3 style="margin-top:30px;">The investigate button</h3>
 
 <co1>
 <p>
-When something isn't working in your program, you press the "wat?" button and Eve will help you figure out why.
+When something isn't working in your program, you press the investigate button and Eve will help you figure out why.
 </p>
 
-<img style="width:700px;" title=" wat workflow " />
+<img style="width:700px;" title=" investigate workflow " />
 
 <p>
-The "wat?" button is an example of something that just can't be done in traditional languages. It requires knowing where things came from and how your program fits together. Currently, the vast majority of our effort is spent just trying to figure out where the error even is, but Eve can take us right to it. Even better, it points us toward why it's going sideways in the first place. This is like giving a car mechanic a device that holds up a giant red arrow saying "The alternator wire is loose right here!"
+The investigate button is an example of something that just can't be done in traditional languages. It requires knowing where things came from and how your program fits together. The vast majority of our effort debugging is spent just trying to figure out where the error even is, but Eve can take us right to it. Even better, it points us toward why it's going sideways in the first place. This is like giving a car mechanic a device that holds up a giant red arrow saying "The alternator wire is loose right here!"
 </p>
 
-<img style="width:700px;" title=" another wat example" />
+<img style="width:700px;" title=" another investigate example" />
 
 <p>
-Given that we spend most of our time debugging, the implication of having this button is clear: we've got a lot more free time.
+Given that we spend most of our time hunting down and fixing errors, the implication of having this button is clear: we've got a lot more free time.
 </p>
 </co1>
 
@@ -221,13 +211,13 @@ Given that we spend most of our time debugging, the implication of having this b
 
 <co1>
 <p>
-As we've developed Eve, we've learned that these seemingly simple choices have remarkably broad consequences on what it means to program. The implications go deep and the opportunities spread wide. Let's look at a few of them.
+As we've developed Eve, we've learned that these seemingly simple choices have remarkably broad consequences on what it means to program. Let's look at a few of them.
 </p>
 </co1>
 
 <row>
 <co>
-<h3>Small blocks that fit into a narrative</h3>
+<h3>Small blocks that fit into a broader story</h3>
 
 <p>
 Code isn't an asset, it's a liability. Every line adds to the surface area of potential bugs and to the pile of things that must be understood and maintained. As long as we aren't obfuscating intent, our goal should be to have less code. Eve programs tend to be very small, but even more importantly individual blocks remain short and single purpose. Because of the literate programming focus, blocks also fit into a narrative that helps provide context. Code is presented in small, digestible pieces, with built in explanations and a place in the larger picture. The impact this has on maintenance, navigation, and collaboration can't be overstated.
@@ -253,11 +243,11 @@ Instead of spreading null checks and asserts throughout our code, invariants can
 <img title=" integrity constraint example " />
 
 <p>
-The fact that constraints can be expressed globally through block composition has a couple of interesting implications. The first is that correctness is pay as you go. You don't have to layout a bunch of types or schemas before you even really know what you're trying to build. You can work on your program and layer on invariants as it seems appropriate.
+The fact that constraints can be expressed globally through block composition has a couple of interesting implications. The first is that correctness is pay as you go. We don't have to layout a bunch of types or schemas before we even really know what we're trying to build. We can work on our program and layer on invariants as it seems appropriate.
 </p>
 
 <p>
-The second is that these integrity constraints will never allow your records to enter into a bad state. As such, it's safe for us to think just about the block we're working on. No need to check invariants every line or worry about adding code that gives everyone ten salaries. We have local reasoning with global enforcement.
+The second is that these integrity constraints will never allow our records to enter into a bad state. As such, it's safe for us to think just about the block we're working on. No need to check invariants every line or worry about adding code that gives everyone ten salaries. We have local reasoning with global enforcement.
 </p>
 
 <p>
@@ -295,7 +285,7 @@ The closest thing we have to this now is the web inspector in browsers, but it's
 <row>
 <co>
 <p>
-When everything works, that's great, but our systems should be measured by our ability to understand them when it's not. Why can't we ask "computer, why is this malfunctioning?" like they do in Star Trek? With the "wat?" button we can.
+Our systems should be measured by our ability to understand them when they're falling apart. Why can't we ask "computer, why is this malfunctioning?" like they do in Star Trek? With the investigate button we can.
 </p>
 <p>
 This is like having another programmer right next to us 24/7. When we're stuck, we hit the button and Eve sets us on a path toward finding and fixing whatever's wrong - "computer, why is this slow?"
@@ -315,7 +305,7 @@ One of the single greatest changes we can make to programming is giving ourselve
 
 <co1>
 <p>
-There's a lot more to dig into, from how we think Eve can shift the bell curve of programming to how we can make this crazy language fast. This is however, just the first of three milestones in our roadmap and it only gets crazier:
+There's a lot more to dig into, from how we think Eve can shift the bell curve of programming to how we can make this crazy language fast. This is however, just the beginning of the first of three milestones in our roadmap:
 </p>
 
 <ul>
@@ -356,8 +346,8 @@ Through all of our research, we've started to piece together a future of computa
 The more interest we can show, the easier it will be for us to continue doing this work. So the best way to help is to spread the word and engage with us. Unfortunately we aren't hiring right now, but we hope to change that in the not too distant future.
 </p>
 <ul class="small">
-  <li>Send it to people</li>
-  <li>Star us on github</li>
+  <li>Send it to people!</li>
+  <li>Star us on github <a class="github-button" href="https://github.com/witheve/eve" data-style="mega" data-count-href="/witheve/eve/stargazers" data-count-api="/repos/witheve/eve#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star witheve/eve on GitHub"></a></li>
   <li>Try it out through the quick start</li>
   <li>Talk to us on the mailing list</li>
   <li>show us neat programs you've build</li>

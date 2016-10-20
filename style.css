@@ -70,7 +70,7 @@ p + img { margin-top:20px; }
 
 ul { position: relative; margin: 20px 0 20px 30px; }
 li { position:relative; margin-left: 20px; }
-li:before { width: 13px; height: 13px; background: white; border: 1px solid #555; left: -34px; content: ""; position: absolute; display: block; top: 2px; }
+li:before { width: 7px; height: 7px; background: white; border: 1px solid #555; left: -24px; content: ""; position: absolute; display: block; top: 5px; }
 li + li { margin-top: 15px; }
 
 ul.small { margin:20px 0 20px 10px; }
