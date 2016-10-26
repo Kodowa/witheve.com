@@ -80,7 +80,7 @@ h1 { font-family: "Open Sans"; font-weight: 600; font-size: 18pt; color: #15193e
 h2 { font-family: "Open Sans"; font-weight: 600; font-size: 14pt; color: #15193e; padding: 50px 0px 35px;}
 h3 { font-family: "Open Sans"; font-weight: 600; font-size: 12pt; color: #15193e; padding: 50px 0px 35px;}
 h4 { font-family: "Open Sans"; font-weight: 600; font-size: 12pt; color: #15193e; margin-bottom:8px; }
-a { font-weight: 400;  color: #15193E; border-bottom:1px dashed #555; cursor:pointer; }
+a { font-weight: 400;  color: #15193E; border-bottom:1px dashed #555; cursor:pointer; text-decoration:none; }
 a:hover { color: #625eff; border-color: #625eff; }
 p { font-family: "Open Sans"; font-weight: 400; font-size: 12pt; padding-bottom: 12px; line-height: 30px;}
 
