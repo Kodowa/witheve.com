@@ -75,7 +75,7 @@ More importantly though, it gives us the ability to weave a narrative of not jus
 </co>
 
 <co>
-<img style="height:550px" title=" eve doc " />
+<img style="width:345px; margin-left: 65px;" src="images/doc.png" title=" eve doc " />
 </co>
 </row>
 
@@ -88,24 +88,13 @@ The environment we want in this context is more about narrative creation than cl
 <p>
 But just because we have a linear representation of the program, that doesn't mean we can't view it in other ways just as easily. Instead of a slew of tabs and complex navigation features, we have a document that arranges itself in whatever shape we need it.
 </p>
-</co>
-<co>
-<img style="height:500px" title=" TOC + elision " />
-</co>
-</row>
-
-<row style="margin-top:50px;">
-<co>
-<img title=" errors " />
-</co>
-<co>
 <p>
-As much as possible, information is kept in context through comments that are embedded in the document. Using these,
-Eve can give you advice when things aren't quite right - she can even offer to fix some of them for you.
+As much as possible, everything is placed in context so that the narrative is kept front and center.
 </p>
-<p>
-Comments also put visualizations, inspectors, and a whole host of other things inline. Everything is related back to the blocks in the document, keeping the narrative at the center.
-</p>
+<img style="margin-bottom:40px;" src="images/comment.png" title=" errors " />
+</co>
+<co>
+<img src="images/elision.gif" style="" title=" TOC + elision " />
 </co>
 </row>
 
@@ -117,13 +106,13 @@ Comments also put visualizations, inspectors, and a whole host of other things i
 Eve is based on a single unifying principle: everything is a record - a set of attribute/value pairs associated to an ID. With this uniformity, Eve only needs a handful of operations that query and manipulate records. Want to send an email? You create an email record. Want to look at messages sent to slack? You query for message records in the slack database. Want to make a todo app? Query for todos and create div records in the browser database.
 </p>
 
-<img style="width: 700px;" title=" email, slack, and todos code" />
+<img src="images/email.png" style="width: 700px;" title=" email, slack, and todos code" />
 </co1>
 </row>
 
 <row>
 <co>
-<img title=" todos appearing " />
+<img src="images/flappy.gif" title="flappy bird" />
 </co>
 
 <co>
@@ -137,7 +126,7 @@ Just nine operations let us write everything from a flappy bird clone to Eve's o
 </row>
 
 
-<h3 style="margin-top:40px; ">Absolute transparency and effortless visualization</h3>
+<h3 style="margin-top:50px; ">Absolute transparency and effortless visualization</h3>
 
 <row>
 <co>
@@ -147,7 +136,7 @@ Because literally everything is a record, we have a completely transparent view 
 </co>
 
 <co>
-<img title=" open http requests " />
+<img src="images/openhttp.png" title=" open http requests " />
 </co>
 </row>
 
@@ -159,7 +148,7 @@ How about memory? Like anything else in Eve, we search for what we want and then
 </co>
 
 <co>
-<img title=" memory slack message " />
+<img src="images/memoryslack.png" title=" memory slack message " />
 </co>
 </row>
 
@@ -171,7 +160,7 @@ But we can do even better. Let's visualize free memory over time:
 </co>
 
 <co>
-<img title=" line chart of memory over time " />
+<img src="images/memory.gif" title=" line chart of memory over time " />
 </co>
 </row>
 
@@ -183,21 +172,21 @@ Think about what this does for our ability to understand programs - we can trivi
 </co>
 
 <co>
-<img title=" cool view over users " />
+<img src="images/users.png" title=" cool view over users " />
 </co>
 </row>
 
-<h3 style="margin-top:30px;">The investigate button</h3>
+<h3 style="margin-top:30px;">The inspector</h3>
 
 <co1>
 <p>
-When something isn't working in your program, you press the investigate button and Eve will help you figure out why.
+When something isn't working in your program, you press the inspect button and Eve will help you figure out why.
 </p>
 
 <img style="width:700px;" title=" investigate workflow " />
 
 <p>
-The investigate button is an example of something that just can't be done in traditional languages. It requires knowing where things came from and how your program fits together. The vast majority of our effort debugging is spent just trying to figure out where the error even is, but Eve can take us right to it. Even better, it points us toward why it's going sideways in the first place. This is like giving a car mechanic a device that holds up a giant red arrow saying "The alternator wire is loose right here!"
+The inspector is an example of something that just can't be done in traditional languages. It requires knowing where things came from and how your program fits together. The vast majority of our effort debugging is spent just trying to figure out where the error even is, but Eve can take us right to it. Even better, it points us toward why it's going sideways in the first place. This is like giving a car mechanic a device that holds up a giant red arrow saying "The alternator wire is loose right here!"
 </p>
 
 <img style="width:700px;" title=" another investigate example" />
@@ -240,7 +229,7 @@ The common interface of records means that Eve blocks compose by default and bec
 Instead of spreading null checks and asserts throughout our code, invariants can be enforced globally by producing error records. Doing this through normal Eve blocks gives us the full power of the language to express arbitrarily complex invariants. Only want to allow new users to be created on a Tuesday when Joe hasn't logged in? Have at it.
 </p>
 
-<img title=" integrity constraint example " />
+<img src="images/integrity.png" title=" integrity constraint example " />
 
 <p>
 The fact that constraints can be expressed globally through block composition has a couple of interesting implications. The first is that correctness is pay as you go. We don't have to lay out a bunch of types or schemas before we even really know what we're trying to build. We can work on our program and layer on invariants as it seems appropriate.
@@ -271,7 +260,7 @@ The closest thing we have to this now is the web inspector in browsers, but it's
 </co>
 
 <co>
-<img title=" inspect a dom node, inspect a block " />
+<img src="images/zoom.png" title=" inspect a dom node, inspect a block " />
 </co>
 </row>
 
@@ -284,7 +273,7 @@ The closest thing we have to this now is the web inspector in browsers, but it's
 <row>
 <co>
 <p>
-Our systems should be measured by our ability to understand them when they're falling apart. Why can't we ask "Computer, why is this malfunctioning?" like they do in Star Trek? With the investigate button we can.
+Our systems should be measured by our ability to understand them when they're falling apart. Why can't we ask "Computer, why is this malfunctioning?" like they do in Star Trek? With the inspect button we can.
 </p>
 <p>
 This is like having another programmer right next to us 24/7. When we're stuck, we hit the button and Eve sets us on a path toward finding and fixing whatever's wrong - "Computer, why is this slow?"
