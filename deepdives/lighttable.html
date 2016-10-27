@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<title>Realizing Light Table</title>
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css' />
+
+
+<div class="wrapper">
+  <a class="vertlogo" href="http://programming.witheve.com"></a>
+  <div class="section">
+    <h1>
+      Realizing Light Table
+    </h1>
+  </div>
+  <div class="section">
+    <p>
+      On a Friday in 2012, I put up a blog post I had thrown together showing a concept for an IDE. We were actually working on an entirely different startup at the time. I'd only worked on the prototype for a few days and most of that was spent hacking around in the Clojure compiler. So it came as a total surprise to us when the Light Table post went on to become the largest launch HackerNews had ever seen and the most successful software project on Kickstarter up to then. That post set us on a path toward researching and building dozens of ideas on how to make programming better. Along the way, we learned that much of what we wanted to do with Light Table didn't fit into the languages and workflows we have today. To make Light Table really work, we needed a platform that was designed for it. Eve is that platform.
+    </p>
+  </div>
+  <div class="section">
+    <p>
+      If you go back and watch the original Light Table videos and compare them to the Eve post, you'll see a lot of similarities. No state is ever hidden. The inspector shows you not just related bits of code, but the specific blocks that affect the things on screen. The document can be reconfigured into only the parts you care about. You can evaluate code in a running program. Anything can be visualized...
+    </p>
+  </div>
+  <div class="section">
+    <p>
+      It took a lot to gain those properties, from designing a language that doesn't depend on order to ensuring that we don't throw away information as we parse and analyze the code you've written. As we built the later versions of Light Table, even doing something as simple as eval in Javascript and Python had numerous caveats and strange edge cases. Eve doesn't have these issues. It was designed from the ground up to support the principles that Light Table was founded on and then expand them into a more cohesive view on programming.
+    </p>
+  </div>
+  <div class="section">
+    <p>
+      A number of folks were upset by our decision to work on Eve in lieu of Light Table, but in reality, we were working on Eve to finally arrive at the LT we always hoped to have. The vision was never about a specific tool. It was about making programming more humane, about making it more accessible and having the computer help us do our work. After years of research, we believe we've finally found a path to turn that into reality.
+    </p>
+  </div>
+  <a href="javascript:history.back()" class="backbtn"></a>
+</div class="wrapper">
