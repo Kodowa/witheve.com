@@ -54,10 +54,10 @@ body { display: flex; justify-content: center; color: #333; font-family: "Open S
 .light { color: #777; }
 
 .videowrapper { position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 60px;}
+.super-wrapper { width: 930px; }
 .video { position: absolute; top: 0; left: 0; box-shadow: 0 3px 10px #bbb; margin-top:30px; width: 100%; height: 100%;}
 img { max-width: 700px; color: #777; border:none; box-shadow: 0 3px 10px #bbb; }
 img:not([src]) { width:500px; height:300px; background: #eee; border:none; }
-.gameover { max-width:1000px; width:1000px;}
 .evedoc { width:345px; margin-left: 65px;}
 .email { width: 700px;}
 .inspectorgif { width: 700px;}
