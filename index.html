@@ -125,7 +125,7 @@ Eve is based on a single unifying principle: everything is a record - a set of a
 Blocks are reactive in Eve; they declaratively specify "when I see these patterns, do these things." You don't need to specify how they update, or how they're cached, or how they're stored, or...  If you add new todos, new divs will automatically appear.
 </p>
 <p>
-Just nine operations let us write everything from a flappy bird clone to Eve's own analyzer.
+Just nine operations let us write everything from a flappy bird clone to Eve's code analyzer.
 </p>
 </co>
 </row>
@@ -301,6 +301,19 @@ One of the single greatest changes we can make to programming is giving ourselve
 <co>
 <img src="images/slow.png" style="" title=" performance information per block " />
 </co>
+</row>
+
+<h3>Consequences of simplicity</h3>
+
+<row>
+<co1>
+<p>
+Simple solutions are unfortunately much more difficult to find than complex ones. It requires being deliberate and questioning many of the things we hold as inherent truths. For example, one would assume that implementing an entire language runtime which includes a parser, a compiler, database indexes, an incremental fixpointer, and a state of the art query engine must be 10s if not 100s of thousands of lines of code. Eve's runtime is about 6500 lines of TypeScript. As a point of comparison, that's roughly 10% of the size of React's source directory and likely smaller than most production code bases by an order of magnitude or two.
+</p>
+<p>
+In the end, the design of Eve stems from a complete focus on simplicity. Instead of Eclipse, let's do our work in something more like pen and paper. Instead of complex semantics, let's have everything be a record. Instead of thousands of debugger options, let's have a magic selection tool where you click on the thing that's going wrong. Eve is about making things simpler for the people solving problems: us.
+</p>
+</co1>
 </row>
 
 <h2 style="margin-top:80px;">Just a taste</h2>
