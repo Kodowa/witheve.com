@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<title>Eve: Programming designed for humans</title>
+<title>Eve</title>
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <link rel="stylesheet" type="text/css" href="style.css" />
 <link rel="icon" type="image/png" href="favicon.png" />
@@ -22,12 +22,14 @@
     <p>
       Eve is a programming language and IDE based on years of research into building a human-first programming platform. Starting from first principles, it presents a very different take on what programming could be. To get a taste, let's look at a day in the life of someone programming in Eve:
     </p>
-<iframe class="video" width="700" height="394" src="https://www.youtube.com/embed/XQPTDa5QuBU?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+<div class="videowrapper">
+<iframe class="video" src="https://www.youtube.com/embed/XQPTDa5QuBU?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+</div>
 </co1>
 
 </row>
 
-<h2 style="margin-top:60px;">Eve is about humans, not computers</h2>
+<h2 style="margin-top:50px;">Eve is about humans, not computers</h2>
 
 <row>
 <co1>
@@ -55,7 +57,7 @@ There's no reason we have to stay on top of a sinking foundation though. What if
 Over the past several years, we've been exploring what an alternate future could look like and have distilled that research into a platform that we call Eve.
 </p>
 
-<img style="max-width:1000px; width:1000px;" title="Eve" src="images/eve.png" />
+<img class="gameover" title="Eve" src="images/eve.png" />
 </co1>
 </row>
 
@@ -75,7 +77,7 @@ More importantly though, it gives us the ability to weave a narrative of not jus
 </co>
 
 <co>
-<img style="width:345px; margin-left: 65px;" src="images/doc.png" title=" eve doc " />
+<img class="evedoc" src="images/doc.png" title=" eve doc " />
 </co>
 </row>
 
@@ -106,13 +108,13 @@ As much as possible, everything is placed in context so that the narrative is ke
 Eve is based on a single unifying principle: everything is a record - a set of attribute/value pairs associated to an ID. With this uniformity, Eve only needs a handful of operations that query and manipulate records. Want to send an email? You create an email record. Want to look at messages sent to slack? You query for message records in the slack database. Want to make a todo app? Query for todos and create div records in the browser database.
 </p>
 
-<img src="images/email.png" style="width: 700px;" title=" email, slack, and todos code" />
+<img class="email" src="images/email.png" title=" email, slack, and todos code" />
 </co1>
 </row>
 
 <row>
 <co>
-<img src="images/flappy.gif" title="flappy bird" />
+<img class="flappy" src="images/flappy.gif" title="flappy bird" />
 </co>
 
 <co>
@@ -183,13 +185,17 @@ Think about what this does for our ability to understand programs - we can trivi
 Visualization is only one part of the story though, sometimes we need to just dig in and investigate what's going on. When something isn't working, you press the inspect button and Eve will help you figure out why.
 </p>
 
-<img src="images/inspector1.gif" style="width:700px;" title=" investigate workflow " />
+<div class="videowrapper">
+  <iframe class="video" src="https://www.youtube.com/embed/r0XGiO40AZw" frameborder="0" allowfullscreen title=" investigate workflow "></iframe>
+</div>
 
 <p>
 The inspector is an example of something that just can't be done in traditional languages. It requires knowing where things came from and how your program fits together. The vast majority of our effort debugging is spent just trying to figure out where the error even is, but Eve can take us right to it. Even better, it points us toward why it's going sideways in the first place. This is like giving a car mechanic a device that holds up a giant red arrow saying "The alternator wire is loose right here!"
 </p>
 
-<img src="images/inspector2.gif" style="width:700px;" title=" another investigate example" />
+<div class="videowrapper">
+  <iframe class="video" src="https://www.youtube.com/embed/t9fXnYiU9eA" frameborder="0" allowfullscreen title=" another investigate example"></iframe>
+</div>
 
 <p>
 Given that we spend most of our time hunting down and fixing errors, the implication of having this button is clear: we've got a lot more free time.
@@ -335,10 +341,10 @@ The more interest we can show, the easier it will be for us to continue doing th
 </p>
 <ul class="small">
   <li>Send it to people!</li>
-  <li>Star us on github <a class="github-button" href="https://github.com/witheve/eve" data-style="mega" data-count-href="/witheve/eve/stargazers" data-count-api="/repos/witheve/eve#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star witheve/eve on GitHub"></a></li>
+  <li>Star us on GitHub <div class="inlinebutton"><a class="github-button" href="https://github.com/witheve/eve" data-style="mega" data-count-href="/witheve/eve/stargazers" data-count-api="/repos/witheve/eve#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star witheve/eve on GitHub"></a></div></li>
   <li>Try it out through the quick start</li>
   <li>Talk to us on the mailing list</li>
-  <li>show us neat programs you've build</li>
+  <li>Show us neat programs you've built</li>
   <li>File bugs</li>
 </ul>
 </co>
@@ -351,7 +357,7 @@ Below we've put together a set of deep dives. If you're interested in how Eve ca
 
 <ul class="small">
   <li><a>Light Table</a></li>
-  <li><a>A simple and consistent langugae</a></li>
+  <li><a>A simple and consistent language</a></li>
   <li><a>Scaling to teams</a></li>
   <li><a>Performance</a></li>
   <li><a>Designing the un-IDE</a></li>
