@@ -51,6 +51,8 @@ body { display: flex; justify-content: center; color: #333; font-family: "Open S
 
 .github { position:absolute; right:5%; top:50px;}
 
+.caption { font-style:italic; font-size: 10pt; color: #777; text-align:center; margin-top:-15px; }
+
 .videowrapper { position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 60px;}
 .super-wrapper { width: 930px; }
 .super-wrapper2 { width: 1000px; margin: 20px 0; }
