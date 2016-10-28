@@ -1,3 +1,7 @@
+---
+title: "Literate Programming and Eve"
+---
+
 # Literate Programming and Eve
 
 Through building Eve, we've found constant inspiration from the ideas of the 1970s and 80s, when what it meant to interact with a computer was still largely a question. Literate programming, a concept central to Eve, was an idea from this time that never fully gained traction, and remains today a largely unexplored yet potentially transformative direction for programming. Donald Knuth introduced literate programming in 1984 as an alternative perspective on the motivation of the programmer. In [his words][2]:
@@ -36,13 +40,13 @@ As you leverage these short-term benefits of literate programming, we hope you'l
 
 It's true that there aren't a lot of literate programming tools out there. Of the ones you can find, most of them follow Knuth's original designs from 1984. We've designed Eve with an emphasis on humane tooling, and literate programming fits naturally into this context. In Eve, you write prose in CommonMark, and code blocks in the Eve language. We chose CommonMark because it is very simple, with only a few piece of easy to learn syntax; and it produces source documents that are readable themselves. However, the Eve editor takes things a step further -- you don't even need to know CommonMark, as all prose formatting is accomplished through a WYSIWYG interface. This ensures that you'll never have to deal with CommonMark parsing errors.
 
-On the program langauge side, Eve is a completely orderless language. This means we can write blocks of code in any order, and they are a valid program. In the context of literate programming, this means we don't need a a macro language to turn a literate program into something understandable by a compliler. We can render an Eve program as an editable document, or we can compile it to run as-is. 
+On the program langauge side, Eve is a completely orderless language. This means we can write blocks of code in any order, and they are a valid program. In the context of literate programming, this means we don't need a a macro language to turn a literate program into something understandable by a compliler. We can render an Eve program as an editable document, or we can compile it to run as-is.
 
-This architecture has far reaching consequences. It means we can render your program as a rich text document. You can edit that document in place, and see the changes in the program immediately, right next to the source. But even more interestingly, it means we can embed elements of your program _in_ the document itself, turning an ordinary document into a live, reactive document with updating values, charts, and visualizations. We're not sure the estent of the tools we can build for this kind of systen but we're eager to find out.  
+This architecture has far reaching consequences. It means we can render your program as a rich text document. You can edit that document in place, and see the changes in the program immediately, right next to the source. But even more interestingly, it means we can embed elements of your program _in_ the document itself, turning an ordinary document into a live, reactive document with updating values, charts, and visualizations. We're not sure the estent of the tools we can build for this kind of systen but we're eager to find out.
 
 ### The code is the truth of the program, so the prose and code will ultimately diverge, leading to prose that is actively misleading.
 
-This argument is really about the fundamental role of a programmer. Our view is that a program is really a design document, a compilation of design decisions about the final program. As with all things design, the "who" and "why" are just as important as the "what" and "how". For instance, how could you find the bug in the following code without the accompanying comment? 
+This argument is really about the fundamental role of a programmer. Our view is that a program is really a design document, a compilation of design decisions about the final program. As with all things design, the "who" and "why" are just as important as the "what" and "how". For instance, how could you find the bug in the following code without the accompanying comment?
 
 ```javascript
 // Print every other line of the array to the console
@@ -73,7 +77,6 @@ We'll also be writing Eve itself in the style of literate programming. Take a lo
 - View
 
 If you’re curious to learn more about Eve, take a look at the following resources:
-Blah blah blah 
 
 [1]: https://en.wikipedia.org/wiki/Literate_programming
 [2]: http://www.literateprogramming.com/knuthweb.pdf
