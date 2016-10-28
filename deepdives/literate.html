@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<title>Literate Programming and Eve</title>
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css' />
+
+
+<div class="wrapper">
+  <a class="vertlogo" href="http://programming.witheve.com"></a>
+  <div class="section">
+    <h1>
+      Literate Programming and Eve
+    </h1>
+  </div>
+  <div class="section">
+    <p>
+    Through building Eve, we've found constant inspiration from the ideas of the 1970s and 80s, when what it meant to interact with a computer was still largely a question. Literate programming, a concept central to Eve, was an idea from this time that never fully gained traction, and remains a largely unexplored yet potentially transformative direction for programming. Donald Knuth introduced literate programming in 1984 as an alternative perspective on the motivation of the programmer. In <a href="http://www.literateprogramming.com/knuthweb.pdf">his words</a>:
+    </p>
+    <blockquote>
+      The practitioner of literate programming can be regarded as an essayist, whose main concern is with exposition and excellence of style. Such an author ... strives for a program that is comprehensible because its concepts have been introduced in an order that is best for human understanding, using a mixture of formal and informal methods that reinforce each other.
+    </blockquote>
+    <p>
+    While some held the view that programming languages are a way to communicate with a computer, Knuth argued the opposite: the purpose of writing a program is to communicate with another human being. The fact that the computer understands the language of the program is incidental. In this world, code is merely one artifact that makes up a program, the others being prose, illustrations, tables, charts, and anything else that we use to communicate ideas.
+    </p>
+    <p>
+    We gravitated toward the idea of literate programming because it fits so well with the ethos of Eve - it shifts the focus to people.
+    </p>
+  </div>
+  <div class="section">
+    <h2>Fighting against our languages</h2>
+    <p>
+    Knuth invented literate programming to help him write a book. He married a markup language with a traditional programming language (in his case Tex, which he invented for the purpose, and Pascal). Using a macro system, he circumvented the order imposed by the Pascal compiler, allowing himself to write code in an order that made narrative sense and to express that narrative using the richness of rendered Tex. From a single source file written in the style of literate programming, his toolchain generated a human-readable document and source ready to be consumed by the Pascal compiler.
+    </p>
+    <p>
+    This method solved his problem, but it has its drawbacks. First, it involves generating and keeping track of three files, instead of just a single file for traditional programs. Second, to use this system we have to know three languages -- a markup language, a programming language, and a macro language to tie the two together. This means we have to deal with three syntaxes and three sources of errors. Finally, maintaining the documents was difficult. For example, if we spotted an error in the generated source code, the fix had to be made in the literate source.
+    </p>
+    <p>
+    While Knuth's tooling was cutting-edge in 1984, his work only just began to reveal the potential of this direction. Unfortunately, today's literate programming systems remain faithful to Knuth's original toolchain, shortcomings included. A big part of why is that most of our languages have a fundamental dependence on source ordering, which is effectively antagonistic to the idea. To write literate programming tooling today means facing the same barriers Knuth was trying to conquer 32 years ago.
+    </p>
+  </div>
+  <div class="section">
+    <h2>Impoving an old idea</h2>
+    <p>
+    We are advocating for literate programming because we believe it leads to better, more maintainable programs. Yet because of the history we've rightfully encountered skepticism that it can really work. It sounds good on paper, but in practice it hasn't lived up to its promises and we certainly can't argue that it's a popular practice today. Much of that is due to an impedence mismatch that results in a great deal of friction. If, however, our languages and tools were built from the ground up to enable it, if we could remove the friction, we might be telling a different story. Let's look at how Eve addresses some of the common arguments against literate programming.
+    </p>
+
+    <h3>
+      1) It takes a lot of upfront invement before we see any benefit.
+    </h3>
+    <p>
+    It's true that literate programming requires taking some time to write things down and that prose won't directly impact the execution of our program, but it *does* impact our thinking. When we're stuck or having trouble understanding something, one of the single most given pieces of advice is to attempt to explain it to someone else. This forces us to state our assumptions and fill in things we might have forgotten. Efficiency in programming isn't about writing code quickly. It's about finding the right code to write in the first place. When deadlines are tight, what's more expensive? Taking a few minutes to write a couple of sentences or forgetting several edge cases that lead to hard to find bugs? Suggesting that we only gain benefit months later from clarifying what we're doing and why is an argument that writing things down has no effect on how we process information. It's also an argument that we're a hive mind.
+    </p>
+    <p>
+    We spend all this time justifying code we write in code reviews and commits, because we need others to both verify and understand what we're doing. Imagine if we kept more of that reasoning directly in the document so that when we dive into something we didn't write ourselves the "what" and "why" is right there. What if instead of the paragraphs we would write in our pull request, we just placed them with code? We are already spending the effort, we're just constantly hiding it from ourselves. The second we check some description in, others will derive benefit from it.
+    </p>
+    <p>
+    Beyond the nebulous idea of cognitive benefits though, there's a lot of value to be gained out of what can be done if our programs are organized meaningfully. For example, Eve's table of contents is driven entirely by the headings we put in our documents. While a seemingly simple feature, having a table of contents for a program, even one we've written, makes a surprisingly big difference. It outlines the functional structure of our program instead of a class or file hierarchy. Coupling that with the ability to hide sections, we can create purpose-built expositions of what our program is meant to do. This is amazingly useful when we're working through code written by several people.
+    </p>
+
+    <h3>
+       2) Tools that support literate programming are currently lacking in quality and quantity.
+    </h3>
+    <p>
+    This is absolutely true. There's entirely too much friction in the tools and methodologies available for literate programming right now. Of the ones we can find, most of them follow Knuth's original designs from 1984. With Eve, we wanted to remove as much of the friction as possible. Eve files are effectively Github-Flavored-Markdown (technically CommonMark), something we're already writing on github, in slack, and on our blogs. There's no extra step needed to untangle the code or talk about positions in the "real source." The markdown is the program. The editor even takes things a step further -- we don't need to know markdown, as all prose formatting is accomplished through a WYSIWYG interface.
+    </p>
+    <p>
+    On the langauge side, Eve is a completely orderless language. We can write blocks of code wherever we want, and it will be a valid program. In the context of literate programming, this means we don't need a a macro language to turn our source into something understandable by the compiler.
+    </p>
+    <p>
+    This architecture has far reaching consequences. It means we can render our program as a rich text document and we can edit that document in place, seeing the changes in our program immediately, right next to the source. But even more interestingly, it means we can embed elements of our programs _in_ the document itself, turning an ordinary document into a live, reactive document with updating values, charts, and visualizations. We're not sure what the full extent of the tools we can build for this kind of systen are, but we're eager to find out.
+    </p>
+
+    <h3>
+      3) The prose and code will diverge
+    </h3>
+    <p>
+    This argument is really about the fundamental role of a programmer. Our view is that a program is really a design document, a set of design decisions about the final program. As with all things design, the "what" and "why" are just as important as the "how". Take this strawman for instance, how could you find the bug in the following code without the accompanying comment?
+    </p>
+    <code><pre>
+// Print every other line of the array to the console
+for (var i = 0; i < myStringArray.length; i++) {
+    console.log(myStringArray[i]);
+}</pre></code>
+    <p>
+    This shows how important intent is to a program. Yes, the example is trivial, but without that comment, how would we know that it's wrong? We'd find out when a user tells us their program deleted too many files. The only thing code gives us is the "how." It definitely doesn't give us the "why" and doesn't even really supply us with the "what". When our code is constantly evolving, how're we supposed to know when things no longer adhere to their purpose if we don't document what that purpose was in the first place?
+    </p>
+    <p>
+    The role of a programmer isn't that of a construction worker. We do not follow a well-thoughout blueprint and focus on high quality execution. We are constantly defining the plan as we go. Comments and code diverging is as a bad as moving a load-bearing support in a building and not updating the blueprint. The reason code and comments diverge isn't because it's too hard to keep them in sync or that it takes too long. Doing so would almost assuredly save us time. It's that way we've simply chosen to accept that our software is largely a house of cards.
+    </p>
+    <p>
+    Defining the intent of our program is as much a part of our job as writing the code that executes that intent. Inconsistencies between the code and the prose are themselves errors in the program and they should be treated as seriously as a buffer overflow. Suggesting that documenting our decisions will lead us to out of date conclusions is the equivalent of saying, we don't need the blueprint since we might have to move a couple of walls.
+    </p>
+  </div>
+  <div class="section">
+    <h2>Some examples</h2>
+    <p>
+    Literate programming is a first-class design concept in Eve. We will be writing all of our programs in this this manner, and will encourage others to do the same for the reasons above. Here are some example Eve programs:
+    </p>
+    <ul>
+      <li><a href="http://play.witheve.com/#/examples/quickstart.eve">Quick start</a></li>
+      <li><a href="http://play.witheve.com/#/examples/todomvc.eve">TodoMVC</a></li>
+      <li><a href="http://play.witheve.com/#/examples/flappy.eve">Flappy Eve</a></li>
+      <li><a href="http://play.witheve.com/#/examples/tic-tac-toe.eve">Tic Tac Toe</a></li>
+      <li><a href="http://play.witheve.com/#/examples/CRM.eve">Simple mobile app</a></li>
+      <li><a href="http://play.witheve.com/#/examples/editor.eve">Eve's editor code</a></li>
+    </ul>
+  </div>
+  <a href="http://programming.witheve.com/#learnmore" class="backbtn"></a>
+</div class="wrapper">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74222157-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+

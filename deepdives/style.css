@@ -62,6 +62,12 @@ body { font-family: "Open Sans"; }
 .section { width: 700px; line-height: 25px; }
 
 h1 { margin-top: 60px; margin-bottom: 40px; text-transform: uppercase; text-align: left; color: #48287c; font-size: 20pt; font-weight: 300; letter-spacing: 0.06em;}
+h2 { margin:30px 0 20px 0; font-size: 14pt; font-weight:bold; }
+h3 { margin:20px 0 20px 0; font-weight: bold; }
+
+blockquote { margin: 20px 50px 30px 40px; font-style:italic; color:#888; line-height: 30px; }
+
+code pre { margin: 20px 40px 30px 40px; font-family: "Inconsolata", "Consolas", "Menlo", monospace; }
 
 p { color: #333; font-size: 12pt; font-weight: 400; line-height: 30px; padding-bottom: 12px;}
 
