@@ -31,23 +31,23 @@
   <div class="section">
     <h2>Fighting against our languages</h2>
     <p>
-    Knuth invented literate programming to help him write a book. He married a markup language with a traditional programming language (in his case Tex, which he invented for the purpose, and Pascal). Using a macro system, he circumvented the order imposed by the Pascal compiler, allowing himself to write code in an order that made narrative sense and to express that narrative using the richness of rendered Tex. From a single source file written in the style of literate programming, his toolchain generated a human-readable document and source ready to be consumed by the Pascal compiler.
+    Knuth invented literate programming to help him write a book. He married a markup language with a traditional programming language (in his case Tex, which he <i>also</i> invented for the purpose, and Pascal). Using a macro system, he circumvented the order imposed by the Pascal compiler, allowing himself to write code in an order that made narrative sense for his book. From a single source file written in the style of literate programming, his toolchain generated a human-readable document, and source ready to be consumed by the Pascal compiler.
     </p>
     <p>
-    This method solved his problem, but it has its drawbacks. First, it involves generating and keeping track of three files, instead of just a single file for traditional programs. Second, to use this system we have to know three languages -- a markup language, a programming language, and a macro language to tie the two together. This means we have to deal with three syntaxes and three sources of errors. Finally, maintaining the documents was difficult. For example, if we spotted an error in the generated source code, the fix had to be made in the literate source.
+    This method solved his problem, but it has drawbacks. First, it involves generating and keeping track of three files, instead of just a single file for traditional programs. Second, to use this system we have to know three languages -- a markup language, a programming language, and then a macro language to tie the other languages together. This means we have to deal with three syntaxes and three sources of errors. Finally, maintaining the documents was difficult. For example, if we spotted an error in the generated source code, the fix had to be made in the literate source.
     </p>
     <p>
     While Knuth's tooling was cutting-edge in 1984, his work only just began to reveal the potential of this direction. Unfortunately, today's literate programming systems remain faithful to Knuth's original toolchain, shortcomings included. A big part of why is that most of our languages have a fundamental dependence on source ordering, which is effectively antagonistic to the idea. To write literate programming tooling today means facing the same barriers Knuth was trying to conquer 32 years ago.
     </p>
   </div>
   <div class="section">
-    <h2>Impoving an old idea</h2>
+    <h2>Improving an old idea</h2>
     <p>
-    We are advocating for literate programming because we believe it leads to better, more maintainable programs. Yet because of the history we've rightfully encountered skepticism that it can really work. It sounds good on paper, but in practice it hasn't lived up to its promises and we certainly can't argue that it's a popular practice today. Much of that is due to an impedence mismatch that results in a great deal of friction. If, however, our languages and tools were built from the ground up to enable it, if we could remove the friction, we might be telling a different story. Let's look at how Eve addresses some of the common arguments against literate programming.
+    We are advocating for literate programming because we believe it leads to better, more maintainable programs. Yet because of the history we've rightfully encountered skepticism that it can really work. It sounds good on paper, but in practice it hasn't lived up to its promises and we certainly can't argue that it's a popular practice today. Much of that is due to an impedance mismatch that results in a great deal of friction. If, however, our languages and tools were built from the ground up to enable it, if we could remove the friction, we might be telling a different story. Let's look at how Eve addresses some of the common arguments against literate programming.
     </p>
 
     <h3>
-      1) It takes a lot of upfront invement before we see any benefit.
+      1) It takes a lot of upfront investment before we see any benefit.
     </h3>
     <p>
     It's true that literate programming requires taking some time to write things down and that prose won't directly impact the execution of our program, but it *does* impact our thinking. When we're stuck or having trouble understanding something, one of the single most given pieces of advice is to attempt to explain it to someone else. This forces us to state our assumptions and fill in things we might have forgotten. Efficiency in programming isn't about writing code quickly. It's about finding the right code to write in the first place. When deadlines are tight, what's more expensive? Taking a few minutes to write a couple of sentences or forgetting several edge cases that lead to hard to find bugs? Suggesting that we only gain benefit months later from clarifying what we're doing is an argument that writing things down has no effect on how we process information. It's also an argument that we're a hive mind.
@@ -63,13 +63,13 @@
        2) Tools that support literate programming are currently lacking in quality and quantity.
     </h3>
     <p>
-    This is absolutely true. There's entirely too much friction in the tools and methodologies available for literate programming right now. Of the ones we can find, most of them follow Knuth's original designs from 1984. With Eve, we wanted to remove as much of the friction as possible. Eve files are effectively Github-Flavored-Markdown (technically CommonMark), something we're already writing on github, in slack, and on our blogs. There's no extra step needed to untangle the code or talk about positions in the "real source." The markdown is the program. The editor even takes things a step further -- we don't need to know markdown, as all prose formatting is accomplished through a WYSIWYG interface.
+    This is absolutely true. There's entirely too much friction in the tools and methodologies available for literate programming right now. Of the ones we can find, most of them follow Knuth's original designs from 1984. With Eve, we wanted to remove as much of the friction as possible. Eve files are effectively Github-Flavored-Markdown (technically CommonMark), something we're already writing on Github, in Slack, and on our blogs. There's no extra step needed to untangle the code or talk about positions in the "real source." The markdown is the program. The editor even takes things a step further -- we don't need to know markdown, as all prose formatting is accomplished through a WYSIWYG interface.
     </p>
     <p>
-    On the langauge side, Eve is a completely orderless language. We can write blocks of code wherever we want, and it will be a valid program. In the context of literate programming, this means we don't need a a macro language to turn our source into something understandable by the compiler.
+    On the language side, Eve is a completely orderless language. We can write blocks of code wherever we want, and it will be a valid program. In the context of literate programming, this means we don't need a macro language to turn our source into something understandable by the compiler.
     </p>
     <p>
-    This architecture has far reaching consequences. It means we can render our program as a rich text document and we can edit that document in place, seeing the changes in our program immediately, right next to the source. But even more interestingly, it means we can embed elements of our programs _in_ the document itself, turning an ordinary document into a live, reactive document with updating values, charts, and visualizations. We're not sure what the full extent of the tools we can build for this kind of systen are, but we're eager to find out.
+    This architecture has far reaching consequences. It means we can render our program as a rich text document and we can edit that document in place, seeing the changes in our program immediately, right next to the source. But even more interestingly, it means we can embed elements of our programs <i>in</i> the document itself, turning an ordinary document into a live, reactive document with updating values, charts, and visualizations. We're not sure what the full extent of the tools we can build for this kind of system are, but we're eager to find out.
     </p>
 
     <h3>
