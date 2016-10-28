@@ -47,9 +47,12 @@ table {
  }
 
 body { display: flex; justify-content: center; color: #333; font-family: "Open Sans"; font-weight: 400; font-size: 12pt; padding-bottom:20vh; }
-.wrapper { max-width: 1000px; }
+.wrapper { max-width: 1000px;  }
 
-.github { position:absolute; right:5%; top:50px;}
+nav { position:absolute; right:5%; top:50px; display:flex; flex-direction:row; align-items:center; }
+nav * + * { margin-left: 20px; }
+nav a { border: none; }
+nav .github { width:120px; }
 
 .caption { font-style:italic; font-size: 10pt; color: #777; text-align:center; margin-top:-15px; }
 
