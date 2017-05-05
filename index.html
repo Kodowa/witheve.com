@@ -40,10 +40,10 @@
             </div>
           </div>
 
-          <code class="code-sample"><span class="keyword"><div class="code-sample-inner">search</span>
-  <span class="operator">[</span><span class="tag">#html/event/click</span> element<span class="operator">:</span> <span class="operator">[</span><span class="tag">#world</span><span class="operator">]]</span>
-  <span class="operator">[</span><span class="tag">#world</span> screen<span class="operator">:</span> <span class="literal">"game"</span><span class="operator">]</span>
-  player <span class="operator">= [</span><span class="tag">#player</span> <span class="tag">#self</span><span class="operator">]</span>
+          <code class="code-sample"><div class="code-sample-inner"><span class="keyword">search</span>
+  <span class="operator">[</span><span class="tag">#html/event/click</span> element<span class="operator">]</span>
+  element <span class="operator">= [</span><span class="tag">#world</span> screen<span class="operator">:</span> <span class="literal">"game"</span><span class="operator">]</span>
+  player <span class="operator">= [</span><span class="tag">#player</span><span class="operator">]</span>
 
 <span class="keyword">commit</span>
   player.velocity <span class="operator">:=</span> <span class="literal">1.17</span></div></code>
@@ -98,15 +98,15 @@
       <section class="layer features">
         <div><h3>Instant feedback</h3> <p>When you make changes to Eve code they are reflected in a live, running app. Eve catches errors as soon as you make them and guides you toward a fix with succinct error messages.</p></div>
 
-        <div><h3>Naturally documented</h3> <p>An Eve document tells a story with your source, featuring a table of contents, text, references, images, and of course code. These elements add context to your program, making the intent behind your code concrete. Interested users (and maybe your future self) will thank you for painting a complete picture in your source.</p></div>
+        <div><h3>Naturally documented</h3> <p>An Eve document tells a story with your source, featuring a table of contents, text, references, images, and of course code. These elements add context to your program, making the intent behind your code concrete. Interested users (and maybe your future self) will thank you.</p></div>
 
-        <div><h3>Designed for debugging</h3> <p>Eve gives you a multimeter for your code, allowing you to visualize and inspect every record, block, and component without changing running code. Views turn records into graphs that update as data changes. When you run into problems, the inspector uses language-level information about where values come from and how they fit together to aid your diagnosis.</p></div>
+        <div><h3>Designed for debugging</h3> <p>Eve gives you a multimeter for your code, allowing you to visualize and inspect every record, block, and component without affecting what’s running. When you run into problems, views and the inspector provide a transparent window into your program’s behavior by monitoring records as they change.</p></div>
 
-        <div><h3>Concurrent and compositional</h3> <p>Eve programs are made up of small blocks that follow a simple pattern: search for records, then update records. Blocks are reactive, have no order, and compose by default. This allows you to build your program organically, without having to worry about callbacks, storage, or caching.</p></div>
+        <div><h3>Concurrent and compositional</h3> <p>Eve programs are made up of small blocks that follow a simple pattern: search for records, then update records. Blocks are reactive, have no order, and compose by default. This allows you to build programs organically, without having to worry about callbacks, storage, or caching.</p></div>
 
-        <div><h3>A single data model</h3> <p>Everything in Eve is represented as records -- from data to events to programs themselves. You never have to worry about the boilerplate associated with converting data from one format to another. After learning a small set of operators to manipulate records (we only have nine), you're ready to work with Eve at any level.</p></div>
+        <div><h3>A single data model</h3> <p>Everything in Eve is represented as records – from data to events to programs themselves. You never have to worry about the boilerplate associated with converting data from one format to another. After learning a small set of operators to manipulate records (we only have nine), you're ready to work with Eve at any level.</p></div>
 
-        <div><h3>Fits in your stack</h3> <p>While Eve provides everything you need to get started building programs, from the editor to the database to the renderer, you can also use Eve as part of your stack with our JavaScript DSL - use only the parts of Eve you need and expand your usage over time.</p></div>
+        <div><h3>Fits in your stack</h3> <p>While Eve provides everything you need to get started building programs, from the editor to the database to the renderer, you can also use Eve as part of your stack with our JavaScript DSL – use only the parts of Eve you need and expand your usage over time.</p></div>
       </section>
     </div>
 
