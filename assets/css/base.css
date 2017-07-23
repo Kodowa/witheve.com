@@ -103,10 +103,10 @@ code .operator { color: gray; }
 /* Header Layer */
 
 .header-wrapper { margin-bottom: -15px; }
-header > .logo { display: flex; flex: 0 0 auto; align-items: center; padding: 0; }
-header > .logo > img { max-width: 60px; }
-header > .logo > h1 { margin: 0; margin-left: 18px; padding: 0; height: 26px; }
-header > .logo > h1 > img { height: 100%; }
+.logo { display: flex; flex: 0 0 auto; align-items: center; padding: 0; }
+.logo > img { max-width: 60px; }
+.logo > h1 { margin: 0; margin-left: 18px; padding: 0; height: 26px; }
+.logo > h1 > img { height: 100%; }
 
 nav { flex: none; display: flex; flex-direction: row-reverse; }
 nav > * { flex: 0 0 auto; padding: 10px 20px; margin: 0; text-decoration: none; color: rgb(74, 64, 136); transition: background 0.1s ease-out; }
@@ -232,6 +232,11 @@ nav > .play-cta { margin: 0; padding: 10px 20px; color: white; }
 .contact > *:last-child { background: rgb(74, 64, 136); }
 .contact > *:last-child:hover { background: rgb(117, 115, 190); }
 .contact > *:last-child:active { background: rgb(142, 140, 215); }
+
+.community h2 { font-size: 24px; margin-bottom: 20px; }
+.community h3 { font-size: 20px; margin-bottom: 20px;}
+.community ul { margin: 0px 0px 20px 20px; list-style-type: circle;}
+.community p {margin-bottom: 20px;}
 
 @media (max-width: 640px) {
     .contact { flex-direction: column; }
