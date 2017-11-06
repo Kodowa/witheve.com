@@ -421,6 +421,10 @@ a:hover .rolloverfog {
 
 @media (max-device-width: 425px) {
 
+  #landing {
+    flex: 1 0 500px;
+  }
+
   #landing .vertlogo {
     height: 150px;
     margin-bottom: 4vh;
@@ -484,6 +488,7 @@ a:hover .rolloverfog {
   #actions .bracket {
     width: 12px;
     height: 33px;
+    margin-right: 5%;
   }
 
   #actions h1 {
@@ -492,7 +497,8 @@ a:hover .rolloverfog {
   }
 
   #actions p {
-    width: 85%;
-    font-size: 0.9em;
+    width: auto;
+    font-size: 0.85em;
+    margin-right: 5%;
   }
 }
