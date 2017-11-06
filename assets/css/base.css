@@ -77,14 +77,14 @@ em {
 }
 
 #landing h1 {
-  font-family: "OpenSans-Light";
+  font-family: "Open Sans", Helvetica, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.28em;
   color: #524fa2;
 }
 
 #landing p {
-  font-family: "Source Sans Pro";
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-weight: 300;
   letter-spacing: 0.06em;
   text-align: center;
@@ -161,14 +161,14 @@ em {
 }
 
 #actions h1 {
-  font-family: "OpenSans-Light";
+  font-family: "Open Sans", Helvetica, sans-serif;
   color: #ffffff;
   letter-spacing: 0.08em;
   line-height: 1.8;
 }
 
 #actions p {
-  font-family: "Source Sans Pro";
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-weight: 300;
   color: #b5abf1;
   letter-spacing: 0.04em;
