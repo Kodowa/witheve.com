@@ -422,17 +422,17 @@ a:hover .rolloverfog {
 @media (max-device-width: 425px) {
 
   #landing .vertlogo {
-    height: 275px;
+    height: 150px;
     margin-bottom: 4vh;
   }
 
   #landing h1 {
-    font-size: 48px;
+    font-size: 1.3em;
     margin-bottom: 3vh;
   }
 
   #landing p {
-    font-size: 36px;
+    font-size: 1em;
     line-height: auto;
     width: 66%;
   }
@@ -444,37 +444,37 @@ a:hover .rolloverfog {
   }
 
   .socialmedia {
-    right: 3vh;
-    bottom: 3vh;
-    width: 150px;
+    right: 20px;
+    bottom: 2.5vh;
+    width: 110px;
   }
 
   .github {
-    width: 65px;
-    height: 65px;
+    width: 45px;
+    height: 45px;
   }
 
   .github:hover {
-    background-position: 0px -65px;
+    background-position: 0px -45px;
   }
 
   .twitter {
-    width: 65px;
-    height: 65px;
+    width: 45px;
+    height: 45px;
   }
 
   .twitter:hover {
-    background-position: 0px -65px;
+    background-position: 0px -45px;
   }
 
   #actions {
     flex-direction: column;
-    flex: 0 0 800px;
+    flex: 0 0 auto;
   }
 
   #actions .hexbutton {
-    width: 150px;
-    margin: 0 5%;
+    width: 4rem;
+    margin: 3% 5%;
   }
 
   #actions .text {
@@ -488,11 +488,11 @@ a:hover .rolloverfog {
 
   #actions h1 {
     width: auto;
-    font-size: 40px;
+    font-size: 1em;
   }
 
   #actions p {
     width: 85%;
-    font-size: 32px;
+    font-size: 0.9em;
   }
 }
